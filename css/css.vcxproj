@@ -93,6 +93,7 @@
     <ClCompile Include="entry_point.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="address.h" />
     <ClInclude Include="console.h" />
     <ClInclude Include="css.h" />
     <ClInclude Include="sdk.h" />

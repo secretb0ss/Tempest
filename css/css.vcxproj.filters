@@ -19,6 +19,9 @@
     <Filter Include="css">
       <UniqueIdentifier>{f279afe5-658b-4718-8c21-5e1d35bb8759}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sdk\address">
+      <UniqueIdentifier>{5aee0952-e237-47a5-b0bd-08153f4ccc85}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk.h">
@@ -29,6 +32,9 @@
     </ClInclude>
     <ClInclude Include="css.h">
       <Filter>css</Filter>
+    </ClInclude>
+    <ClInclude Include="address.h">
+      <Filter>sdk\address</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

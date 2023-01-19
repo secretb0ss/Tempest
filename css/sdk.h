@@ -6,4 +6,5 @@
 #include <iostream>
 
 #include "console.h"
+#include "address.h"
 #include "css.h"
