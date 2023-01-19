@@ -2,15 +2,36 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="entry_point.cpp" />
+    <ClCompile Include="console.cpp">
+      <Filter>sdk\console</Filter>
+    </ClCompile>
+    <ClCompile Include="css.cpp">
+      <Filter>css</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="sdk">
       <UniqueIdentifier>{fb3ee5ae-2e5d-46c8-9fe2-32dfe65c6c21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\console">
+      <UniqueIdentifier>{facb053e-0c87-41cb-97b4-9352bbcddc9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="css">
+      <UniqueIdentifier>{f279afe5-658b-4718-8c21-5e1d35bb8759}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk.h">
       <Filter>sdk</Filter>
     </ClInclude>
+    <ClInclude Include="console.h">
+      <Filter>sdk\console</Filter>
+    </ClInclude>
+    <ClInclude Include="css.h">
+      <Filter>css</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

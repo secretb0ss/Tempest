@@ -42,3 +42,6 @@
 *.recipe
 *.tlog
 *.log
+*.ipdb
+.vs/css/v17/.suo
+*.txt
