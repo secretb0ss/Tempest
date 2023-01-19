@@ -24,6 +24,10 @@ public:
         return *this;
     }
 
+	bool operator!( ) const {
+		return !address;
+	}
+
     template< typename T >
     T* as_function( ) {
         return reinterpret_cast< T* >( address );
