@@ -14,7 +14,7 @@ namespace css {
 		}
 		catch ( const std::exception& exception ) {
 			MessageBoxA( nullptr, exception.what( ), "css", MB_ICONERROR );
-			FreeLibraryAndExitThread( static_cast< HMODULE >( parameter ), 0 );
+			FreeLibraryAndExitThread( static_cast< HMODULE >( parameter ), 1 );
 		}
 	}
 }
