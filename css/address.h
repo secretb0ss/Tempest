@@ -24,9 +24,9 @@ public:
         return *this;
     }
 
-	bool operator!( ) const {
-		return !address;
-	}
+    bool operator!( ) const {
+        return !address;
+    }
 
     template< typename T >
     T* as_function( ) {
