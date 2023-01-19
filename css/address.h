@@ -29,19 +29,19 @@ public:
         return reinterpret_cast< T* >( address );
     }
 
-	template < typename T, int L = 1 >
-	T dereference( ) {
-		if ( !address )
-			return T( );
+    template < typename T, int L = 1 >
+    T dereference( ) {
+        if ( !address )
+            return T( );
 
-		auto current = address;
-		for ( auto i = 0; i < L; i++ ) {
-			if ( !current )
-				continue;
+        auto current = address;
+        for ( auto i = 0; i < L; i++ ) {
+            if ( !current )
+                continue;
 
-			current = *reinterpret_cast< uintptr_t* >( current );
-		}
+            current = *reinterpret_cast< uintptr_t* >( current );
+        }
 
-		return *reinterpret_cast< T* >( current );
-	}
+        return *reinterpret_cast< T* >( current );
+    }
 };
