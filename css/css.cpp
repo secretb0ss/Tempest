@@ -4,7 +4,7 @@ namespace css {
 	unsigned long __stdcall init( void* parameter ) {
 		try {
 			console::open( );
-			printf_s( "initialized\n" );
+			console::print( "initalized" );
 
 			while ( !GetAsyncKeyState( VK_DELETE ) )
 				std::this_thread::sleep_for( std::chrono::milliseconds( 100 ) );

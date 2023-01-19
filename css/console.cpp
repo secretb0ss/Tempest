@@ -1,23 +1,25 @@
 #include "sdk.h"
 
 namespace console {
-	FILE* stdout_stream = nullptr;
+    std::ofstream stdout_stream = { };
 
-	void open( ) {
-		if ( !AllocConsole( ) )
-			throw std::runtime_error( "failed to allocate console" );
-		
-		freopen_s( &stdout_stream, "CONOUT$", "w", stdout );
+    void open( ) {
+        if ( !AllocConsole( ) )
+            throw std::runtime_error( "failed to allocate console" );
 
-		if ( !stdout_stream )
-			throw std::runtime_error( "failed to open output stream" );
-	}
+        stdout_stream.open( std::filesystem::path( "CONOUT$" ), std::ios::out );
 
-	void close( ) {
-		if ( fclose( stdout_stream ) )
-			throw std::runtime_error( "failed to close output stream" );
+        if ( !stdout_stream.is_open( ) )
+            throw std::runtime_error( "failed to open output stream" );
 
-		if ( !FreeConsole( ) )
-			throw std::runtime_error( "failed to free console" );
-	}
+        std::cout.rdbuf( stdout_stream.rdbuf( ) );
+    }
+
+    void close( ) {
+        stdout_stream.flush( );
+        stdout_stream.close( );
+
+        if ( !FreeConsole( ) )
+            throw std::runtime_error( "failed to free console" );
+    }
 }

@@ -1,9 +1,9 @@
 #pragma once
 
 #include <Windows.h>
-#include <cstdio>
-#include <stdexcept>
-#include <thread>
+#include <filesystem>
+#include <fstream>
+#include <iostream>
 
 #include "console.h"
 #include "css.h"
