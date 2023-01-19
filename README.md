@@ -20,7 +20,7 @@ Visual C++ Redistributable for Visual Studio 2015-2019
 
 # Installation
 Clone the source code from the repository 
-Include the required dependencies (personally, I use https://github.com/microsoft/vcpkg for this task)
+Include the required dependencies (personally, I use [vcpkg](https://github.com/microsoft/vcpkg) for this task)  
 Compile the source code  
 Inject the dll with your preferred injector  
 
