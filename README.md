@@ -15,9 +15,6 @@ Windows
 Counter Strike: Source (Steam version)  
 Visual C++ Redistributable for Visual Studio 2015-2019
 
-# Dependencies
-- [spdlog](https://github.com/gabime/spdlog)
-
 # Installation
 Clone the source code from the repository
 Compile the source code  
