@@ -22,6 +22,9 @@
     <Filter Include="sdk\address">
       <UniqueIdentifier>{5aee0952-e237-47a5-b0bd-08153f4ccc85}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sdk\module">
+      <UniqueIdentifier>{cbbcb332-610e-4915-b4c8-75cae0286727}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk.h">
@@ -35,6 +38,9 @@
     </ClInclude>
     <ClInclude Include="address.h">
       <Filter>sdk\address</Filter>
+    </ClInclude>
+    <ClInclude Include="module.h">
+      <Filter>sdk\module</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
