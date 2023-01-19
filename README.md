@@ -2,14 +2,6 @@
 This is a work in progress hack for the Windows version of Counter Strike: Source, specifically designed for the Steam version of the game.  
 Currently, the hack is in its early stages and does not have any features yet.
 
-# Features to come
-- [ ] Legit aimbot
-- [ ] Rage aimbot
-- [ ] Player esp
-- [ ] World esp
-- [ ] Movement features (bunnyhop, autostrafe)
-- And more
-
 # Requirements
 Windows  
 Counter Strike: Source (Steam version)  
