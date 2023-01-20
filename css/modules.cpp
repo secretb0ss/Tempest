@@ -1,7 +1,7 @@
 #include "sdk.h"
 
 namespace modules {
-	std::unordered_map< uintptr_t , c_module > module_map = { };
+	std::unordered_map< uintptr_t, c_module > module_map = { };
 
 	void init( ) {
 		const auto cur_process = GetCurrentProcess( );
@@ -20,7 +20,10 @@ namespace modules {
 				K32GetModuleInformation( cur_process, module_handle, &module_info, sizeof( MODULEINFO ) );
 				K32GetModuleBaseNameA( cur_process, module_handle, module_name, sizeof( module_name ) );
 
-				c_module module( module_name, c_address( reinterpret_cast< uintptr_t >( module_info.lpBaseOfDll ) ), module_info.SizeOfImage );
+				c_module module( 
+					module_name,
+					c_address( reinterpret_cast< uintptr_t >( module_info.lpBaseOfDll ) ), 
+					module_info.SizeOfImage );
 
 				module_map.insert( { hashing::get_hash( module_name ), module } );
 			}
