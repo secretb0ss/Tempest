@@ -30,7 +30,7 @@ namespace modules {
 			throw std::runtime_error( "failed to fill module map" );
 	}
 
-	c_module find( const std::string name ) {
+	c_module find( const std::string& name ) {
 		const auto it = module_map.find( hashing::get_hash( name ) );
 
 		if ( it == module_map.end( ) )
