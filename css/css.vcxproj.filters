@@ -3,7 +3,7 @@
   <ItemGroup>
     <ClCompile Include="entry_point.cpp" />
     <ClCompile Include="console.cpp">
-      <Filter>sdk\console</Filter>
+      <Filter>console</Filter>
     </ClCompile>
     <ClCompile Include="css.cpp">
       <Filter>css</Filter>
@@ -14,13 +14,19 @@
     <ClCompile Include="modules.cpp">
       <Filter>modules</Filter>
     </ClCompile>
+    <ClCompile Include="hashing.cpp">
+      <Filter>hashing</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\xxhash\xxhash.c">
+      <Filter>sdk\dependencies\xxhash</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\xxhash\xxh_x86dispatch.c">
+      <Filter>sdk\dependencies\xxhash</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="sdk">
       <UniqueIdentifier>{fb3ee5ae-2e5d-46c8-9fe2-32dfe65c6c21}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="sdk\console">
-      <UniqueIdentifier>{facb053e-0c87-41cb-97b4-9352bbcddc9f}</UniqueIdentifier>
     </Filter>
     <Filter Include="css">
       <UniqueIdentifier>{f279afe5-658b-4718-8c21-5e1d35bb8759}</UniqueIdentifier>
@@ -40,13 +46,25 @@
     <Filter Include="modules">
       <UniqueIdentifier>{a8568d57-9e08-4c00-9914-a4321f834599}</UniqueIdentifier>
     </Filter>
+    <Filter Include="console">
+      <UniqueIdentifier>{facb053e-0c87-41cb-97b4-9352bbcddc9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\dependencies">
+      <UniqueIdentifier>{6595945f-7fcc-422d-b37a-32efdee1511b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\dependencies\xxhash">
+      <UniqueIdentifier>{db5984c7-162b-4ef8-b700-c2643fd4c8ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hashing">
+      <UniqueIdentifier>{04220b3a-6085-400b-b077-919759d90643}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sdk.h">
       <Filter>sdk</Filter>
     </ClInclude>
     <ClInclude Include="console.h">
-      <Filter>sdk\console</Filter>
+      <Filter>console</Filter>
     </ClInclude>
     <ClInclude Include="css.h">
       <Filter>css</Filter>
@@ -62,6 +80,18 @@
     </ClInclude>
     <ClInclude Include="modules.h">
       <Filter>modules</Filter>
+    </ClInclude>
+    <ClInclude Include="hashing.h">
+      <Filter>hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\xxhash\xxh3.h">
+      <Filter>sdk\dependencies\xxhash</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\xxhash\xxhash.h">
+      <Filter>sdk\dependencies\xxhash</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\xxhash\xxh_x86dispatch.h">
+      <Filter>sdk\dependencies\xxhash</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

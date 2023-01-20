@@ -90,7 +90,10 @@
   <ItemGroup>
     <ClCompile Include="console.cpp" />
     <ClCompile Include="css.cpp" />
+    <ClCompile Include="dependencies\xxhash\xxhash.c" />
+    <ClCompile Include="dependencies\xxhash\xxh_x86dispatch.c" />
     <ClCompile Include="entry_point.cpp" />
+    <ClCompile Include="hashing.cpp" />
     <ClCompile Include="module.cpp" />
     <ClCompile Include="modules.cpp" />
   </ItemGroup>
@@ -98,6 +101,10 @@
     <ClInclude Include="address.h" />
     <ClInclude Include="console.h" />
     <ClInclude Include="css.h" />
+    <ClInclude Include="dependencies\xxhash\xxh3.h" />
+    <ClInclude Include="dependencies\xxhash\xxhash.h" />
+    <ClInclude Include="dependencies\xxhash\xxh_x86dispatch.h" />
+    <ClInclude Include="hashing.h" />
     <ClInclude Include="module.h" />
     <ClInclude Include="modules.h" />
     <ClInclude Include="sdk.h" />

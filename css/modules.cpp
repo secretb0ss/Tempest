@@ -1,7 +1,7 @@
 #include "sdk.h"
 
 namespace modules {
-	std::deque< c_module > module_list = { };
+	std::unordered_map< uintptr_t , c_module > module_map = { };
 
 	void init( ) {
 		const auto cur_process = GetCurrentProcess( );
@@ -20,11 +20,22 @@ namespace modules {
 				K32GetModuleInformation( cur_process, module_handle, &module_info, sizeof( MODULEINFO ) );
 				K32GetModuleBaseNameA( cur_process, module_handle, module_name, sizeof( module_name ) );
 
-				module_list.emplace_back( module_name, c_address( reinterpret_cast< uintptr_t >( module_info.lpBaseOfDll ) ), module_info.SizeOfImage );
+				c_module module( module_name, c_address( reinterpret_cast< uintptr_t >( module_info.lpBaseOfDll ) ), module_info.SizeOfImage );
+
+				module_map.insert( { hashing::get_hash( module_name ), module } );
 			}
 		}
 
-		if ( module_list.empty( ) )
-			throw std::runtime_error( "failed to fill module list" );
+		if ( module_map.empty( ) )
+			throw std::runtime_error( "failed to fill module map" );
+	}
+
+	c_module find( const std::string name ) {
+		const auto it = module_map.find( hashing::get_hash( name ) );
+
+		if ( it == module_map.end( ) )
+			throw std::runtime_error( std::format( "failed to find module {}", name ) );
+
+		return it->second;
 	}
 }

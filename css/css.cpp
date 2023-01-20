@@ -4,6 +4,7 @@ namespace css {
 	unsigned long __stdcall init( void* parameter ) {
 		try {
 			console::open( );
+			hashing::init( );
 			modules::init( );
 			console::print( "initalized" );
 
@@ -11,6 +12,7 @@ namespace css {
 				std::this_thread::sleep_for( std::chrono::milliseconds( 100 ) );
 
 			console::close( );
+			hashing::unload( );
 			FreeLibraryAndExitThread( static_cast< HMODULE >( parameter ), 0 );
 		}
 		catch ( const std::exception& exception ) {
