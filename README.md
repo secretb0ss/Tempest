@@ -2,7 +2,7 @@
 This is a work in progress hack for the Windows version of Counter Strike: Source, specifically designed for the Steam version of the game.  
 Currently, the hack is in its early stages and does not have any features yet.
 
-#Dependencies
+# Dependencies
 - [xxHash](https://github.com/Cyan4973/xxHash)
 
 # Requirements
