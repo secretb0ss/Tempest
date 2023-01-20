@@ -8,6 +8,12 @@
     <ClCompile Include="css.cpp">
       <Filter>css</Filter>
     </ClCompile>
+    <ClCompile Include="module.cpp">
+      <Filter>sdk\memory\module</Filter>
+    </ClCompile>
+    <ClCompile Include="modules.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="sdk">
@@ -19,11 +25,20 @@
     <Filter Include="css">
       <UniqueIdentifier>{f279afe5-658b-4718-8c21-5e1d35bb8759}</UniqueIdentifier>
     </Filter>
-    <Filter Include="sdk\address">
+    <Filter Include="sdk\memory">
+      <UniqueIdentifier>{fed141fc-f7e5-4d12-a3e0-01af48cd9930}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\memory\module">
+      <UniqueIdentifier>{cbbcb332-610e-4915-b4c8-75cae0286727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\memory\address">
       <UniqueIdentifier>{5aee0952-e237-47a5-b0bd-08153f4ccc85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="sdk\module">
-      <UniqueIdentifier>{cbbcb332-610e-4915-b4c8-75cae0286727}</UniqueIdentifier>
+    <Filter Include="sdk\memory\signature">
+      <UniqueIdentifier>{f10b3a8d-bdd2-4faa-ba50-673883357803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules">
+      <UniqueIdentifier>{a8568d57-9e08-4c00-9914-a4321f834599}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,10 +52,16 @@
       <Filter>css</Filter>
     </ClInclude>
     <ClInclude Include="address.h">
-      <Filter>sdk\address</Filter>
+      <Filter>sdk\memory\address</Filter>
     </ClInclude>
     <ClInclude Include="module.h">
-      <Filter>sdk\module</Filter>
+      <Filter>sdk\memory\module</Filter>
+    </ClInclude>
+    <ClInclude Include="signature.h">
+      <Filter>sdk\memory\signature</Filter>
+    </ClInclude>
+    <ClInclude Include="modules.h">
+      <Filter>modules</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

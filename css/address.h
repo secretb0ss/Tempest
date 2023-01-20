@@ -28,6 +28,10 @@ public:
         return !address;
     }
 
+    uintptr_t operator( )( ) const {
+        return this->address;
+    }
+
     template< typename T >
     T* as_function( ) {
         return reinterpret_cast< T* >( address );

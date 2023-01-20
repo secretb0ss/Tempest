@@ -9,5 +9,8 @@
 
 #include "console.h"
 #include "address.h"
+#include "signature.h"
 #include "module.h"
+
+#include "modules.h"
 #include "css.h"

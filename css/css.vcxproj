@@ -91,13 +91,17 @@
     <ClCompile Include="console.cpp" />
     <ClCompile Include="css.cpp" />
     <ClCompile Include="entry_point.cpp" />
+    <ClCompile Include="module.cpp" />
+    <ClCompile Include="modules.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="address.h" />
     <ClInclude Include="console.h" />
     <ClInclude Include="css.h" />
     <ClInclude Include="module.h" />
+    <ClInclude Include="modules.h" />
     <ClInclude Include="sdk.h" />
+    <ClInclude Include="signature.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
