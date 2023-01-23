@@ -32,6 +32,12 @@ public:
         return this->address;
     }
 
+    // separate arithmetic function, this makes the code a lot cleaner
+    // example: address.add(0xXX).dereference(X);
+	c_address add( const ptrdiff_t offset ) const {
+		return { address + offset };
+	}
+
     template< typename T >
     T* as_function( ) {
         return reinterpret_cast< T* >( address );
@@ -42,14 +48,14 @@ public:
         if ( !address )
             return T( );
 
-        auto current = address;
+        auto current = reinterpret_cast< T >( address );
         for ( auto i = 0; i < L; i++ ) {
             if ( !current )
                 continue;
 
-            current = *reinterpret_cast< uintptr_t* >( current );
+            current = *reinterpret_cast< T* >( current );
         }
 
-        return *reinterpret_cast< T* >( current );
+        return current;
     }
 };

@@ -45,3 +45,5 @@
 *.ipdb
 .vs/css/v17/.suo
 *.txt
+*.ilk
+*.idb

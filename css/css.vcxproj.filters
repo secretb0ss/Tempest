@@ -40,9 +40,6 @@
     <Filter Include="sdk\memory\address">
       <UniqueIdentifier>{5aee0952-e237-47a5-b0bd-08153f4ccc85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="sdk\memory\signature">
-      <UniqueIdentifier>{f10b3a8d-bdd2-4faa-ba50-673883357803}</UniqueIdentifier>
-    </Filter>
     <Filter Include="modules">
       <UniqueIdentifier>{a8568d57-9e08-4c00-9914-a4321f834599}</UniqueIdentifier>
     </Filter>
@@ -57,6 +54,12 @@
     </Filter>
     <Filter Include="hashing">
       <UniqueIdentifier>{04220b3a-6085-400b-b077-919759d90643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\valve">
+      <UniqueIdentifier>{de7d854f-b971-4b99-b6af-9b0ed86530a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\valve\classes">
+      <UniqueIdentifier>{e18fcb4f-4e93-46f2-b179-dc0572fa7b91}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -75,9 +78,6 @@
     <ClInclude Include="module.h">
       <Filter>sdk\memory\module</Filter>
     </ClInclude>
-    <ClInclude Include="signature.h">
-      <Filter>sdk\memory\signature</Filter>
-    </ClInclude>
     <ClInclude Include="modules.h">
       <Filter>modules</Filter>
     </ClInclude>
@@ -92,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="dependencies\xxhash\xxh_x86dispatch.h">
       <Filter>sdk\dependencies\xxhash</Filter>
+    </ClInclude>
+    <ClInclude Include="interface_reg.h">
+      <Filter>sdk\valve\classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -15,10 +15,11 @@
 
 #include "console.h"
 #include "address.h"
-#include "signature.h"
 #include "module.h"
 
 #include "hashing.h"
+
+#include "interface_reg.h"
 
 #include "modules.h"
 #include "css.h"

@@ -105,10 +105,10 @@
     <ClInclude Include="dependencies\xxhash\xxhash.h" />
     <ClInclude Include="dependencies\xxhash\xxh_x86dispatch.h" />
     <ClInclude Include="hashing.h" />
+    <ClInclude Include="interface_reg.h" />
     <ClInclude Include="module.h" />
     <ClInclude Include="modules.h" />
     <ClInclude Include="sdk.h" />
-    <ClInclude Include="signature.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
