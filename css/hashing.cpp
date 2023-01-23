@@ -2,7 +2,7 @@
 
 namespace hashing {
 	XXH32_state_t* hash_state = nullptr;
-	
+
 	void init( ) {
 		hash_state = XXH32_createState( );
 		XXH32_reset( hash_state, 0 );

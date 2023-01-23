@@ -4,7 +4,7 @@ class c_address {
 public:
     uintptr_t address = 0;
 
-    c_address( const uintptr_t addr = 0x0 ) : address( addr ) {}
+    c_address( const uintptr_t addr = 0x0 ) : address( addr ) { }
 
     c_address operator+( const ptrdiff_t offset ) const {
         return { address + offset };
@@ -34,9 +34,9 @@ public:
 
     // separate arithmetic function, this makes the code a lot cleaner
     // example: address.add(0xXX).dereference(X);
-	c_address add( const ptrdiff_t offset ) const {
-		return { address + offset };
-	}
+    c_address add( const ptrdiff_t offset ) const {
+        return { address + offset };
+    }
 
     template< typename T >
     T* as_function( ) {

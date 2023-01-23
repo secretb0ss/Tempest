@@ -26,8 +26,7 @@ c_address c_module::find_signature( const std::vector< byte >& bytes ) const {
 			if ( module_bytes[ s + i ] != byte_array[ s ] ) {
 				valid = false;
 				break;
-			}
-			else
+			} else
 				valid = true;
 		}
 
@@ -40,8 +39,8 @@ c_address c_module::find_signature( const std::vector< byte >& bytes ) const {
 
 void c_module::populate_interfaces( ) {
 	// s_pInterfaceRegs
-	auto cur_interface = this->find_signature( { 0x8B,0x35,0xAE,0xAE,0xAE,0xAE,0x57,0x85,0xF6,0x74,0x38 } ).add( 0x2 ).dereference< interface_reg*, 2 >( );
-	
+	auto cur_interface = this->find_signature( { 0x8B,0x35,0xAE,0xAE,0xAE,0xAE,0x57,0x85,0xF6,0x74,0x38 } ).add( 0x2 ).dereference< valve::interface_reg*, 2 >( );
+
 	while ( cur_interface ) {
 		interface_map.insert( { hashing::get_hash( cur_interface->name ), { cur_interface->name, reinterpret_cast< uintptr_t >( cur_interface->create_fn( ) ) } } );
 		cur_interface = cur_interface->next;
